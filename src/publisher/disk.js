@@ -1,7 +1,8 @@
+const _ = require('lodash')
 const fs = require("fs")
 const path = require("path")
-const _ = require('lodash')
 
+const logger = require('../logger')
 const config = require('../config')
 
 const publish = (report) => {
@@ -13,7 +14,11 @@ const publish = (report) => {
 
   return new Promise((resolve, reject) => {
     fs.writeFile(filePath, jsonData, err => {
-      if (err) reject(err)
+      if (err) {
+        logger.error(`[published] ${report.name} to ${filePath}`)
+        reject(err)
+      }
+      logger.debug(`[published] ${report.name} to ${filePath}`)
       resolve()
     })
   })

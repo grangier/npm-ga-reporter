@@ -6,18 +6,14 @@
 # testing
 /coverage
 
-# output
-/output
-
-# envs
-*.env
-
 # production
 /build
 
+# envs
+envs/*.sh
+
 # misc
 .DS_Store
-.env
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
