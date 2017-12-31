@@ -1,19 +1,16 @@
-const winston = require("winston-color")
-
-const config = require("./src/config")
-const Analytics = require("./src/analytics")
-const Publisher = require("./src/publisher")
-
 const _ = require('lodash')
 
-winston.transports.console.level = "info"
-winston.transports.console.prettyPrint = true
+const logger = require('./src/logger')
+const config = require('./src/config')
+
+const Analytics = require('./src/analytics')
+const Publisher = require('./src/publisher')
 
 // runner
 const run = function(options = {}) {
-  if (options.debug || options.verbose) {
-    winston.transports.console.level = "debug"
-  }
+  // if (options.debug || options.verbose) {
+  //   winston.transports.console.level = "debug"
+  // }
   const reports = _getReports(options)
   return _runBatch(reports)
 }
@@ -32,10 +29,12 @@ const _formater = (response, index, array) => {
 }
 
 const _publisher = (report, index, array) => {
+  logger.debug(`[${report.name}]` + "Publishing...")
   return Publisher.disk.publish(report)
 }
 
 const _runBatch = (reports) => {
+  logger.debug("RunBatch...")
   return Analytics.query(reports).then(results => {
     return results
   })
@@ -46,7 +45,7 @@ const _runBatch = (reports) => {
     return _.map(results, _publisher)
   })
   .catch(err => {
-    winston.error(`[Eeee] `, err)
+    logger.error(err)
   })
 }
 

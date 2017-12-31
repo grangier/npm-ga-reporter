@@ -1,5 +1,5 @@
 {
-  "name": "npm-ga-reporter",
+  "name": "ga-reporter",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:grangier/npm-ga-reporter.git",
@@ -11,7 +11,6 @@
     "lodash": "^4.17.4",
     "minimist": "^1.2.0",
     "moment": "^2.20.1",
-    "winston": "^2.4.0",
     "winston-color": "^1.0.0"
   }
 }
