@@ -1,10 +1,19 @@
 const _ = require('lodash')
 
+const mapping = require('./mapping')
+
+
+const _translate = (key) => {
+  return mapping[key] || {pk: key, label: key}
+}
 
 class Metric {
   constructor(metric) {
-    this.name = metric.name
+    const translated = _translate(metric.name)
     this.type = metric.type
+    this.field = metric.name
+    this.name = translated.pk
+    this.label = translated.label
   }
 
   cast(value) {
@@ -60,7 +69,10 @@ class Metrics {
 
 class Dimension {
   constructor(name) {
-    this.name = name
+    const translated = _translate(name)
+    this.name = translated.pk
+    this.label = translated.label
+    this.field = name
   }
 }
 
@@ -100,7 +112,7 @@ class Report {
       }
 
       values = this.headers.metrics.values(values)
-      
+
       if(row.dimensions) {
         const dims = this.headers.dimensions.values(row.dimensions)
         values = _.merge(dims, values)
