@@ -1,0 +1,4 @@
+# ANALYTICS
+export ANALYTICS_KEY_PATH="./reporting-key-google.json"
+export ANALYTICS_ROOT_PATH="."
+export ANALYTICS_REPORTS_PATH="./output"

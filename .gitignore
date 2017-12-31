@@ -6,6 +6,12 @@
 # testing
 /coverage
 
+# output
+/output
+
+# envs
+*.env
+
 # production
 /build
 
