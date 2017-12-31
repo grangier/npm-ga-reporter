@@ -1,0 +1,269 @@
+{
+  "reports": [
+    {
+      "columnHeader": {
+        "dimensions": [
+          "ga:deviceCategory",
+          "ga:channelGrouping"
+        ],
+        "metricHeader": {
+          "metricHeaderEntries": [
+            {
+              "name": "ga:pageviews",
+              "type": "INTEGER"
+            },
+            {
+              "name": "ga:sessions",
+              "type": "INTEGER"
+            },
+            {
+              "name": "ga:users",
+              "type": "INTEGER"
+            },
+            {
+              "name": "ga:newusers",
+              "type": "INTEGER"
+            },
+            {
+              "name": "ga:bounces",
+              "type": "INTEGER"
+            },
+            {
+              "name": "ga:timeonpage",
+              "type": "TIME"
+            }
+          ]
+        }
+      },
+      "data": {
+        "rows": [
+          {
+            "dimensions": [
+              "desktop",
+              "(Other)"
+            ],
+            "metrics": [
+              {
+                "values": [
+                  "24691",
+                  "15931",
+                  "10543",
+                  "3314",
+                  "12849",
+                  "1963226.0"
+                ]
+              }
+            ]
+          },
+          {
+            "dimensions": [
+              "desktop",
+              "Direct"
+            ],
+            "metrics": [
+              {
+                "values": [
+                  "3451412",
+                  "1087529",
+                  "605705",
+                  "480661",
+                  "640474",
+                  "5.30322888E8"
+                ]
+              }
+            ]
+          },
+          {
+            "dimensions": [
+              "desktop",
+              "Email"
+            ],
+            "metrics": [
+              {
+                "values": [
+                  "191462",
+                  "66747",
+                  "30486",
+                  "11202",
+                  "37405",
+                  "2.6626991E7"
+                ]
+              }
+            ]
+          },
+          {
+            "dimensions": [
+              "desktop",
+              "Organic Search"
+            ],
+            "metrics": [
+              {
+                "values": [
+                  "2890981",
+                  "1244667",
+                  "864980",
+                  "588824",
+                  "854476",
+                  "3.2040878E8"
+                ]
+              }
+            ]
+          },
+          {
+            "dimensions": [
+              "desktop",
+              "Paid Search"
+            ],
+            "metrics": [
+              {
+                "values": [
+                  "19",
+                  "19",
+                  "19",
+                  "0",
+                  "19",
+                  "0.0"
+                ]
+              }
+            ]
+          },
+          {
+            "dimensions": [
+              "desktop",
+              "Referral"
+            ],
+            "metrics": [
+              {
+                "values": [
+                  "946844",
+                  "585239",
+                  "400386",
+                  "224739",
+                  "478975",
+                  "7.1304703E7"
+                ]
+              }
+            ]
+          },
+          {
+            "dimensions": [
+              "desktop",
+              "Social"
+            ],
+            "metrics": [
+              {
+                "values": [
+                  "648691",
+                  "360404",
+                  "213304",
+                  "106187",
+                  "288114",
+                  "6.6793574E7"
+                ]
+              }
+            ]
+          },
+          {
+            "dimensions": [
+              "mobile",
+              "(Other)"
+            ],
+            "metrics": [
+              {
+                "values": [
+                  "12597",
+                  "10291",
+                  "8004",
+                  "2616",
+                  "8683",
+                  "536516.0"
+                ]
+              }
+            ]
+          },
+          {
+            "dimensions": [
+              "mobile",
+              "Direct"
+            ],
+            "metrics": [
+              {
+                "values": [
+                  "3821487",
+                  "2498269",
+                  "1610207",
+                  "945798",
+                  "1883436",
+                  "1.87604439E8"
+                ]
+              }
+            ]
+          },
+          {
+            "dimensions": [
+              "mobile",
+              "Email"
+            ],
+            "metrics": [
+              {
+                "values": [
+                  "97020",
+                  "48180",
+                  "22191",
+                  "8857",
+                  "28955",
+                  "8234744.0"
+                ]
+              }
+            ]
+          }
+        ],
+        "totals": [
+          {
+            "values": [
+              "16426402",
+              "8918029",
+              "5851228",
+              "3554751",
+              "6615001",
+              "1.422695659E9"
+            ]
+          }
+        ],
+        "rowCount": 20,
+        "minimums": [
+          {
+            "values": [
+              "19",
+              "19",
+              "19",
+              "0",
+              "19",
+              "0.0"
+            ]
+          }
+        ],
+        "maximums": [
+          {
+            "values": [
+              "3821487",
+              "2498269",
+              "1610207",
+              "945798",
+              "1883436",
+              "5.30322888E8"
+            ]
+          }
+        ],
+        "samplesReadCounts": [
+          "460150"
+        ],
+        "samplingSpaceSizes": [
+          "8918030"
+        ],
+        "isDataGolden": true
+      },
+      "nextPageToken": "10"
+    }
+  ]
+}
